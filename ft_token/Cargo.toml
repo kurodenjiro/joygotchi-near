@@ -1,0 +1,21 @@
+[package]
+name = "ft_token"
+edition = "2021"
+version = "0.1.0"
+license = "MIT"
+description = "The Contract for Fungible Token platform"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+opt-level = "z"
+overflow-checks = true
+panic = "abort"
+
+[dependencies]
+near-sdk = "4.0.0"
+near-contract-standards = "4.0.0"
